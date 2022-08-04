@@ -32,7 +32,7 @@ function Meetings() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(meetingData)
     }
-    const data = await client.get(`/contacts/${id}/meetings`, opts)
+    const data = await client.post(`/contacts/${id}/meetings`, opts)
     setMeetings([...meetings, data.meeting])
   }
 
